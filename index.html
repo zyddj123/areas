@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>适合包邮地区的 省市选择插件</title>
+    <link rel="stylesheet" type="text/css" href="./areas.css">
+    <style>
+        #divF {
+            display: flex;
+        }
+
+        #div1 {
+            width: 500px;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+        #div2 {
+            width: 500px;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="divF">
+        <div id="div1">
+
+        </div>
+        <div id="div2">
+            
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="./areas.js"></script>
+
+    <script type="text/javascript">
+        $('#div1').areas().find('.okBtn').on("getChecked", function (ev, x) {
+            console.log(x);
+        });
+        $('#div2').areas({ level: 2 }).find('.okBtn').on("getChecked", function (ev, x) {
+            console.log(x);
+        });
+    </script>
+</body>
+</html>
